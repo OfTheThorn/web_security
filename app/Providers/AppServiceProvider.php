@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Exceptions\DenyApiFail;
 use Illuminate\Support\ServiceProvider;
+use Ubient\PwnedPasswords\Contracts\LookupErrorHandler;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind(LookupErrorHandler::class, DenyApiFail::class);
     }
 
     /**
