@@ -16,6 +16,7 @@
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.0",
         "livewire/livewire": "^2.0",
+        "spatie/laravel-cookie-consent": "^2.12",
         "ubient/laravel-pwned-passwords": "^3.3"
     },
     "require-dev": {

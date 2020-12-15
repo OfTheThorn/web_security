@@ -1,0 +1,39 @@
+﻿VERWERKINGSREGISTER
+ 
+Contactgegevens:
+ 
+Bedrijfsnaam: MatthiasVDD Security Projects, Nijverheidskaai 170, 1070 Anderlecht, e-mailadres: websecurity@ofthethorn.be, telefoonnummer: +32485950408
+ 
+Verwerkingsactiviteiten van reguliere persoonsgegevens:
+ 
+Categorie persoonsgegeven(s): E-mailadres/telefoonnummer
+Categorie betrokkenen: Leden
+Grondslag voor de verwerking: Toestemming
+Doel verwerking: Ledenadministratie
+Zelf verwerken: Ja  
+Waar bevindt zich de verwerker? Binnen de EU of in een land met voldoende juridische waarborgen 
+EU Verwerkersovereenkomst? Niet van toepassing/Niet nodig 
+Bewaartermijn: onbekend
+Veiligheidsmaatregelen: Garanties m.b.t. de veiligheid van de systemen Toegangsbeperking/voorafgaande authorisatie
+ 
+ 
+Categorie persoonsgegeven(s): Digitale gegevens (IP adressen, inloggegevens)
+Categorie betrokkenen: Leden
+Grondslag voor de verwerking: Gerechtvaardigd belang
+Doel verwerking: Ledenadministratie
+Zelf verwerken: Ja  
+Waar bevindt zich de verwerker? Binnen de EU of in een land met voldoende juridische waarborgen 
+EU Verwerkersovereenkomst? Niet van toepassing/Niet nodig 
+Bewaartermijn: onbekend
+Veiligheidsmaatregelen: Garanties m.b.t. de veiligheid van de systemen Toegangsbeperking/voorafgaande authorisatie
+ 
+Verwerkingsactiviteiten van bijzondere persoonsgegevens: NVT 
+ 
+Datum aanmaken register: 15 december 2020
+Updates: 
+
+ 
+
+
+
+ 

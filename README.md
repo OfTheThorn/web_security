@@ -1,61 +1,75 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+#Web security app by Matthias Van Den Dooren
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Technology used to develop this website is Laravel Jetstream 8. 
 
-## About Laravel
+####_Providers used_
+- Combell is used for hosting (<a href="https://ofthethorn.be">ofthethorn.be</a>)
+- Cloudflare for HTTPS and security.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### HTTPS
+- <a href="https://www.ssllabs.com/ssltest/analyze.html?d=ofthethorn.be">SSL Labs</a>
+- <a href="https://hstspreload.org/?domain=ofthethorn.be">HSTS Preload list</a>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Registration
+- Username, email, password required
+- Login using username
+- Password:
+    - Min. 7 characters
+    - HIBP Pwned using <a href="https://github.com/ubient/laravel-pwned-passwords">ubient-laravel-pwned-passwords</a>
+- Email verification
+- Password manager support
+- Password encrpytion via Bcrypt
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Login
+- Time-out upon 5 failures
+- Can paste password
+- Email verification
+- Shows username when logged in in top-right corner
+- Profile section to view + modify user details
 
-## Learning Laravel
+### Privacy declaration
+- Visible on all pages
+- <a href="https://www.ofthethorn.be/privacy">https://www.ofthethorn.be/privacy</a>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Permissions
+- Clear cookie policy at <a href="https://www.ofthethorn.com/cookies"> https://www.ofthethorn.com/cookies</a>
+- Request permission on every page. Stored as session cookie.
+- Using <a href="https://github.com/spatie/laravel-cookie-consent">spatie-laravel-cookie-consent</a>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Rights
+- Print all rights using <a href="https://ofthethorn.be/user/profile/detailsJSON">link</a> (JSON)
+- Privacy declaration contains others
 
-## Laravel Sponsors
+### Verwerkingsregister (Records of processing activities)
+- Can be found in our GitHub
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### Measures against attacks
+- Third-party components are up-to-date and have no known security threats
+- Only using widely popular, commonly used and frequently updated packages
+- Secrets are protected
+    - Data is encrypted
+    - Correctly setup server
+    - Usage of .env file which is inaccessible for attackers
+- XSS, CSRF, code injection protection:
+    - XSS flaw was fixed in Laravel 7 (This website was made using Laravel 8)
+    - CSRF protection on all forms
+        - Further info at <a href="https://laravel.com/docs/8.x/csrf#csrf-x-xsrf-token"> link</a>
+    - Code injection
+        - Vulnerability fixed in 5.8
+        - Using Laravel's Eloquent for queries prevents injection
+- Using <a href="https://snyk.io/vuln/composer:laravel%2Fframework">Synk</a> to keep up to date with security issues regarding Laravel.
+- Setup GitHub Action to run NPM audit daily/on each push & pull to check vulnerabilities in packages
 
-### Premium Partners
+### Secrets
+- Usage of .env files to keep secrets (only accessible from backend)
+- No secrets in plaintext in Github
+- X-XSRF-COOKIES are used in frontend
+    - Cookies are encrypted
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+### Measures against web vulnerabilities
+- CSRF, XSS and code injection have been discussed before
+- Clickjacking protection using FrameGuard middleware (set X-Frame-Options to SAMEORIGIN)
+- SQL injection protection using Eloquent
+- HTML & CSS injection prevention using Laravel's built in escape
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Rest API
