@@ -93,10 +93,14 @@ Technology used to develop this website is Laravel Jetstream 8.
     - Bearer token required for all actions except get list and get id (returns 401 if not)
 - Possible requests:
     - https://ofthethorn.be/api/gins
-        - GET request
+        - GET
             - No token required
             - Returns full list of all gins
             - 200 OK when successful
+        - POST
+            - 
+        - PUT
+        - DELETE
     - https://ofthethorn.be/api/gins/{id}
         - GET 
             - No token required
@@ -106,5 +110,10 @@ Technology used to develop this website is Laravel Jetstream 8.
             - Returns 405 error (not allowed)
         - PUT 
             - Returns 204 if empty
+            - Returns 404 if not found
+            - Returns 200 if ok
         - DELETE
+            - Returns 404 if not found
+            - Returns 403 if trying to delete someone else's gin (except for admins)
+            - Returns 200 if deleted
     

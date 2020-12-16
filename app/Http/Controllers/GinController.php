@@ -41,7 +41,7 @@ class GinController extends Controller
         $gin->name = $request->get("name");
         $gin->description = $request->get("description");
         $user->gins()->save($gin);
-        return response('Created', 201)->header('Location', "/api/gins/" . $gin->id);
+        return response('Created', 201)->header('Location', "https://ofthethorn.be/api/gins/" . $gin->id);
     }
 
     public function update(Request $request, $id)
