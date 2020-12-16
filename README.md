@@ -2,7 +2,7 @@
 
 Technology used to develop this website is Laravel Jetstream 8. 
 
-####_Providers used_
+#### Providers used
 - Combell is used for hosting (<a href="https://ofthethorn.be">ofthethorn.be</a>)
 - Cloudflare for HTTPS and security.
 
@@ -41,7 +41,7 @@ Technology used to develop this website is Laravel Jetstream 8.
 - Privacy declaration contains others
 
 ### Verwerkingsregister (Records of processing activities)
-- Can be found in our GitHub
+- Can be found in our <a href="https://github.com/OfTheThorn/web_security/blob/master/Verwerkingsregister.txt">GitHub</a>
 
 ### Measures against attacks
 - Third-party components are up-to-date and have no known security threats
@@ -73,3 +73,38 @@ Technology used to develop this website is Laravel Jetstream 8.
 - HTML & CSS injection prevention using Laravel's built in escape
 
 ### Rest API
+- API can be found at <a href="https://ofthethorn.be/api/gins">/api/gins</a>
+- OPTIONS headers for available for all requests
+- OPTIONS response returns all required parameters.
+- Allowed origins are https://ofthethorn.be and https://www.ofthethorn.be
+    - All operations are allowed from these origins. Requests from other origins will be blocked.
+- Public API keys:
+    - Regular user: ky8l0PYTCTZJCyDdqkv39FQAOxOTq8i9lhkwAwup
+    - Admin user: sEFDzPbTZ9mAfjAIWpp80woVKLeUmW4R4auzJ4RZ
+- Token based system
+- Protected against MIME sniffing
+- Protected against clickjacking (X-Frame-Options)
+- Rules:
+    - Everything except get list / get individual gin requires token
+    - Users can create new gins, cannot delete gins created by other users
+    - Admins can't create new gins, can delete gins of everyone
+    - Users can generate their own key and set own options on the API section after logging in
+    - Everyone can edit all gins
+    - Bearer token required for all actions except get list and get id (returns 401 if not)
+- Possible requests:
+    - https://ofthethorn.be/api/gins
+        - GET request
+            - No token required
+            - Returns full list of all gins
+            - 200 OK when successful
+    - https://ofthethorn.be/api/gins/{id}
+        - GET 
+            - No token required
+            - Returns 200 if found
+            - Returns 404 if not found
+        - POST 
+            - Returns 405 error (not allowed)
+        - PUT 
+            - Returns 204 if empty
+        - DELETE
+    

@@ -56,8 +56,8 @@ class GinController extends Controller
             return response()->json(['error' => 403, 'message' => 'Insufficient permissions'], 403);
 
         $validator = Validator::make($request->all(), [
-            'name' => "required",
-            'description' => "required"
+            'name' => "required_without_all:description",
+            'description' => "required_without_all:name"
         ]);
         if ($validator->fails()) {
             return response()->json($validator->errors(), 204);
