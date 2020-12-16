@@ -35,6 +35,7 @@ Technology used to develop this website is Laravel Jetstream 8.
 - Clear cookie policy at <a href="https://www.ofthethorn.com/cookies"> https://www.ofthethorn.com/cookies</a>
 - Request permission on every page. Stored as session cookie.
 - Using <a href="https://github.com/spatie/laravel-cookie-consent">spatie-laravel-cookie-consent</a>
+- Cookie policy provides clear explanation
 
 ### Rights
 - Print all rights using <a href="https://ofthethorn.be/user/profile/detailsJSON">link</a> (JSON)
