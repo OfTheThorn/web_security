@@ -98,9 +98,13 @@ Technology used to develop this website is Laravel Jetstream 8.
             - Returns full list of all gins
             - 200 OK when successful
         - POST
-            - 
+            - Returns 201 with Location header to new resource if ok
+            - Returns 403 if admin tries to create new resource
+            - Returns 400 + custom message if description and name are missing
         - PUT
+            - Returns 405
         - DELETE
+            - Returns 405
     - https://ofthethorn.be/api/gins/{id}
         - GET 
             - No token required
