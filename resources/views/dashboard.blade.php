@@ -14,7 +14,7 @@
     </div>
     <footer>
         <div class="text-center">
-            <a href="resources/views/">Privacy policy</a>
+            <a href="https://www.ofthethorn.be/privacy">Privacy policy</a>
         </div>
     </footer>
 </x-app-layout>
