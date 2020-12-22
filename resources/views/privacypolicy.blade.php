@@ -1274,7 +1274,7 @@
                                                                         href="https://www.ofthethorn.be/user/profile"
                                                                         target="_blank" data-custom-class="link">https://www.ofthethorn.be/user/profile</a></bdt><bdt
                                                                     class="else-block"></bdt></span></span><span
-                                                            data-custom-class="body_text">. We will respond to your request within 30 days.</span></span></span>
+                                                            data-custom-class="body_text">.</span></span></span>
                                                 </div>
                                                 <style> ul {
                                                         list-style-type: square;

@@ -83,14 +83,14 @@
     <div style="line-height: 1.5;"><br></div>
     <div style="line-height: 1.5;"><span style="color: rgb(127, 127, 127);"><span
                 style="color: rgb(89, 89, 89); font-size: 15px;"><span data-custom-class="body_text">We use first<bdt
-                        class="block-component"></bdt> and third<bdt class="statement-end-if-in-editor"></bdt> party cookies for several reasons. Some cookies are required for technical reasons in order for our Websites to operate, and we refer to these as "essential" or "strictly necessary" cookies. Other cookies also enable us to track and target the interests of our users to enhance the experience on our Online Properties. <bdt
-                        class="block-component"></bdt>Third parties serve cookies through our Websites for advertising, analytics and other purposes. <bdt
+                        class="block-component"></bdt><bdt class="statement-end-if-in-editor"></bdt> party cookies for several reasons. Some cookies are required for technical reasons in order for our Websites to operate, and we refer to these as "essential" or "strictly necessary" cookies. <bdt
+                        class="block-component"></bdt>We do not serve third parties cookies through our Websites for advertising, analytics and other purposes. <bdt
                         class="statement-end-if-in-editor"></bdt>This is described in more detail below.</span></span></span>
     </div>
     <div style="line-height: 1.5;"><br></div>
     <div style="line-height: 1.5;"><span style="color: rgb(127, 127, 127);"><span
                 style="color: rgb(89, 89, 89); font-size: 15px;"><span data-custom-class="body_text">The specific types of first<bdt
-                        class="block-component"></bdt> and third<bdt class="statement-end-if-in-editor"></bdt> party cookies served through our Websites and the purposes they perform are described below (please note that the specific cookies served may vary depending on the specific Online Properties you visit):</span></span></span>
+                        class="block-component"></bdt><bdt class="statement-end-if-in-editor"></bdt> party cookies served through our Websites and the purposes they perform are described below (please note that the specific cookies served may vary depending on the specific Online Properties you visit):</span></span></span>
     </div>
     <div style="line-height: 1.5;"><br></div>
     <div style="line-height: 1.5;"><span style="color: rgb(127, 127, 127);"><span
@@ -121,7 +121,7 @@
                     data-custom-class="body_text">.</span></span></span></div>
     <div style="line-height: 1.5;"><br></div>
     <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">The specific types of first and third party cookies served through our Websites and the purposes they perform are described in the table below (please note that the specific&nbsp;</span><span
+                style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">The specific types of first cookies served through our Websites and the purposes they perform are described in the table below (please note that the specific&nbsp;</span><span
                     data-custom-class="body_text">cookies served may vary depending on the specific Online Properties you visit):</span></span></span><span
             style="font-size: 15px;"></span><span data-custom-class="heading_2" style="color: rgb(0, 0, 0);"><span
                 style="font-size: 15px;"><strong><u><br><br>Essential website cookies:</u></strong></span></span></div>
