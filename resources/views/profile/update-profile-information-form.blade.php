@@ -51,7 +51,7 @@
                 <x-jet-input-error for="photo" class="mt-2" />
             </div>
         @endif
-
+        @csrf
         <!-- Name -->
         <div class="col-span-6 sm:col-span-4">
             <x-jet-label for="name" value="{{ __('Name') }}" />

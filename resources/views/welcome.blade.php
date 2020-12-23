@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -460,8 +461,76 @@
                         </div>
                     </div>
                 </div>
+                <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
+                    <div class="flex items-center">
+                        <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white"><p
+
+                                class="underline text-gray-900 dark:text-white">Find gin</div>
+                    </div>
+                    <table class="dark:text-white">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Detail</th>
+                        </tr>
+                        </thead>
+                        <tbody id="ginList">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
+                    <div class="flex items-center">
+                        <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white"><p
+
+                                class="underline text-gray-900 dark:text-white">Create gin</div>
+                    </div>
+                    <div class="ml-12">
+                        <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                            This is here just for demonstration. Trying to use this method will return a 302 redirect to login page.
+                            <hr/>
+                            <form method="post" action="{{route("gins.store")}}">
+                                @csrf
+                                <div class="col-span-6 sm:col-span-4">
+                                    <x-jet-label for="name" value="{{ __('Gin name') }}" class="dark:text-white"/>
+                                    <x-jet-input id="name" name="name" type="text" class="mt-1 block w-full"/>
+                                </div>
+                                <br/>
+                                <div class="col-span-6 sm:col-span-4">
+                                    <x-jet-label for="description" value="{{ __('Description') }}" class="dark:text-white"/>
+                                    <x-jet-input id="description" name="description" type="text" class="mt-1 block w-full"/>
+                                </div>
+                                <br/>
+                                <input type="submit" value="Create new gin"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+
+        <script src="{{asset('js/app.js')}}"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+                integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready();
+            window.onload = function () {
+                let ginList = [];
+                axios.get('http://localhost:8000/api/gins')
+                    .then(response => {
+                        ginList = response.data;
+
+                        let rows = ginList.data.forEach(function (value) {
+                            let link = "http://localhost:8000/api/gins/" + value.id;
+                            $('table tr:last').after('<tr><td>' + value.name + '</td><td>' + value.description + '</td><td><a href=' + link + '>' + "View" + '</a></td></tr>')
+                        });
+                        console.log(rows);
+                    })
+                    .catch(error => console.error(error));
+            };
+        </script>
 
         <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
             <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
@@ -471,4 +540,5 @@
     </div>
 </div>
 </body>
+
 </html>

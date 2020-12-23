@@ -62,7 +62,12 @@ class GinController extends Controller
         if ($validator->fails()) {
             return response()->json($validator->errors(), 204);
         }
-        $gin->update($request->all());
+        if($request->get("name") != "")
+            $gin->name = $request->get("name");
+        if($request->get("description") != "")
+            $gin->description = $request->get("description");
+
+        $gin->save();
         return response("Updated", 200);
 
     }
